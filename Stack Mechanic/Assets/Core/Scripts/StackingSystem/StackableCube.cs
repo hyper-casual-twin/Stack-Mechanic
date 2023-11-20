@@ -11,15 +11,15 @@ public class StackableCube : MonoBehaviour, IStackable
     private const float JUMP_RADIUS = 1f;
 
     private Collider stackCollider;
-    public Collider Collider
-    {
-        get
-        {
-            return stackCollider == null ? stackCollider = GetComponentInChildren<Collider>() : stackCollider;
-        }
-    }
+    //public Collider Collider
+    //{
+    //    get
+    //    {
+    //        return stackCollider == null ? stackCollider = GetComponentInChildren<Collider>() : stackCollider;
+    //    }
+    //}
 
-    public Collider GetCollider() { return stackCollider ??= GetComponentInChildren<Collider>(); }
+    public Collider GetCollider() => stackCollider ??= GetComponentInChildren<Collider>();
 
     private Tween scaleTween;
 
